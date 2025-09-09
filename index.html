@@ -3,55 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram del trabajo</title>
+    <title>KVNGRAM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #22500c;
-            display: flex;
+            background-color: #f0f2f5;
         }
-
-        /* no confundas Barra lateral izquierda */
         .sidebar {
-            width: 140px;
-            background-color: #28de7ace;
-            border-right: 1px solid #32cd32;
-            height: 100vh;
-            padding: 20px;
-            position: fixed;
+            background-color: #28de7a;
+            min-height: 100vh;
         }
-
-        .logo {
-            font-size: 30px;
+        .sidebar .nav-link {
+            color: #fff;
             font-weight: bold;
-            margin-bottom: 40px;
         }
-
-        .menu div {
-            padding: 10px 0;
-            cursor: pointer;
+        .sidebar .nav-link:hover {
+            background-color: #20c997;
+            color: #fff;
         }
-
-        /* esto debe ser lo inicial son tamaños */
-        .main-content {
-            margin-left: 170px; /* recuerda esto es la barra*/
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .feed {
-            width: 500px;
-        }
-
-        .stories {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
         .story {
             width: 60px;
             height: 60px;
@@ -60,159 +29,98 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
             font-size: 12px;
         }
-
         .post {
-            background-color: #89f336;
-            border: 1px solid #32cd32;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
             margin-bottom: 20px;
         }
-
-        .post-header, .post-actions, .post-caption {
-            padding: 10px;
-        }
-
         .post-image {
-            height: 300px;
             background-color: #ccc;
+            height: 300px;
         }
-
-        /* Barra  de los seguidores */
         .right-sidebar {
-            width: 300px;
-            margin-left: 20px;
+            background-color: #eaffd0;
+            padding: 15px;
+            border-radius: 5px;
         }
-
-        .mini-profile, .suggestions {
-            background-color: #89f336;
-            border: 1px solid #32cd32;
-            margin-bottom: 20px;
+        .mini-profile {
+            background-color: #c6f6c6;
             padding: 10px;
-        }
-
-        h3 {
-            margin-top: 0;
-        }
-
-        /* === prueba de maya === */
-        @media (max-width: 1024px) {
-            .right-sidebar {
-                display: none; /* deberia ocultar la barra */
-            }
-            .feed {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 70px;
-                padding: 10px;
-            }
-            .logo {
-                font-size: 18px;
-                text-align: center;
-            }
-            .menu div {
-                font-size: 12px;
-                text-align: center;
-                padding: 8px 0;
-            }
-            .main-content {
-                margin-left: 90px;
-                padding: 10px;
-            }
-        }
-
-
-        @media (max-width: 480px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-top: 1px solid #010d0d;
-                display: flex;
-                justify-content: space-around;
-            }
-            .main-content {
-                margin-left: 0;
-                margin-bottom: 60px; /* llena este espacio libre */
-                padding: 10px;
-            }
-            .menu {
-                display: flex;
-                width: 100%;
-                justify-content: space-around;
-            }
-            .menu div {
-                padding: 10px;
-                font-size: 14px;
-            }
+            margin-bottom: 15px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Barra de inicio -->
-    <div class="sidebar">
-        <div class="logo">KVNGRAM</div>
-        <div class="menu">
-            <div>home</div>
-            <div>scrach</div>
-            <div>upload</div>
-            <div>messenger</div>
-            <div>likes</div>
-            <div>you</div>
-        </div>
-    </div>
-
-    <!-- base de la feed -->
-    <div class="main-content">
-        <!-- Feed -->
-        <div class="feed">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar py-4">
+            <div class="text-center mb-4 fs-4 fw-bold text-white">KVNGRAM</div>
+            <ul class="nav flex-column text-center text-md-start px-2">
+                <li class="nav-item"><a class="nav-link" href="#"> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">buscar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">subir</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Messenger</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Likes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">tu</a></li>
+            </ul>
+        </nav>
+        <main class="col-md-7 col-sm-12 p-4">
             
-            <div class="stories">
+            <div class="d-flex gap-3 mb-4">
                 <div class="story">yo</div>
                 <div class="story">1</div>
                 <div class="story">2</div>
                 <div class="story">3</div>
                 <div class="story">4</div>
             </div>
-
-            <!-- Pub -->
+            <!-- la columna principal  -->
             <div class="post">
-                <div class="post-header">Usuario</div>
+                <div class="p-3 border-bottom fw-bold">Usuario</div>
                 <div class="post-image"></div>
-                <div class="post-actions">cora mensajes enviar</div>
-                <div class="post-caption">Texto de la publicación...</div>
+                <div class="p-3 border-top d-flex justify-content-between">
+                    <span>❤️</span>
+                    <span>💬</span>
+                    <span>📤</span>
+                </div>
+                <div class="p-3">holaaa amores soy tralaleratralalaa y les quiero hablar de mi</div>
             </div>
 
             <div class="post">
-                <div class="post-header">Usuario</div>
+                <div class="p-3 border-bottom fw-bold">Usuario</div>
                 <div class="post-image"></div>
-                <div class="post-actions">cora mensajes enviar</div>
-                <div class="post-caption">Otro texto de publicación...</div>
+                <div class="p-3 border-top d-flex justify-content-between">
+                    <span>❤️</span>
+                    <span>💬</span>
+                    <span>📤</span>
+                </div>
+                <div class="p-3">que les parece mi nuevo corte de pelo</div>
             </div>
-        </div>
+        </main>
 
-        <!-- la parte de sugerencias -->
-        <div class="right-sidebar">
-            <div class="mini-profile">Mini perfil</div>
-            <div class="suggestions">
-                <h3>Sugerencias para ti</h3>
-                <div>chancho</div>
-                <div>gokussjfase5</div>
-                <div>tu abuela</div>
+        <!-- barra de lado -->
+        <aside class="col-md-3 d-none d-md-block p-4">
+            <div class="right-sidebar">
+                <div class="mini-profile">
+                    <strong>Mini perfil</strong><br>
+                    @tu_usuario
+                </div>
+                <h5>Sugerencias para ti</h5>
+                <ul class="list-unstyled">
+                    <li>👤 chancho</li>
+                    <li>👤 gokussjfase5</li>
+                    <li>👤 tu abuela</li>
+                </ul>
             </div>
-        </div>
+        </aside>
+
     </div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
